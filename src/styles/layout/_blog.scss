@@ -3,14 +3,16 @@
 @use '../core/' as *;
 
 .blog {
-   margin-top: 7rem;
+	margin-top: 7rem;
 
 	&__wrapper {
 		display: flex;
-		
-	}	
+		flex-direction: column;
+	}
 
 	&__title {
+		padding: 1.5rem 2rem;
+
 		h2 {
 			font-family: $main-font;
 			font-size: $h2-font-size;
@@ -19,13 +21,51 @@
 			color: $text-dark-color;
 			padding: 1.5rem 0;
 
-			@include breakpointDesktop(768px) {
-				
-				
-			}
-
 			@include breakpointDesktop(440px) {
 				font-size: $h3-font-size;
+			}
+		}
+	}
+	&__create {
+		p a {
+			color: $text-light-color;
+			position: relative; // for the hover effect
+			text-transform: uppercase;
+			font-family: $secondary-font;
+			font-weight: 700;
+			font-size: $h6-font-size;
+			color: $text-dark-color;
+			padding-bottom: 4rem; //ver aqui
+		}
+		p a:after {
+			content: '';
+			position: absolute;
+			width: 0;
+			left: 50%;
+			bottom: -2px;
+			height: 2px;
+			background-color: $text-dark-color;
+			transition: all 300ms ease;
+		}
+		p a:hover:after {
+			width: 100%;
+			left: 0;
+		}
+	}
+
+	&__posts {
+		h4 {
+			font-family: $secondary-font;
+			font-size: $h4-font-size;
+			color: $text-light-color;
+		}
+
+		&__post {
+			h3 {
+				font-family: $main-font;
+				font-size: $h3-font-size;
+				color: $text-light-color;
+				padding: 1.5rem 0;
 			}
 		}
 	}
