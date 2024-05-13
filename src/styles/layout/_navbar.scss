@@ -10,7 +10,6 @@
 	z-index: 10;
 	padding: 1rem 0;
 	background: rgba(80, 92, 84, 0.6);
-	/* backdrop-filter: blur(50px); */
 
 	&__wrapper {
 		display: flex;
@@ -36,7 +35,7 @@
 
 		li a {
 			color: $text-light-color;
-			position: relative; // for the hover effect
+			position: relative; 
 			text-transform: uppercase;
 			font-family: $secondary-font;
 			font-weight: 700;
@@ -69,12 +68,11 @@
 			max-height: 100vh;
 			opacity: 0;
 			backdrop-filter: blur(60px);
-			padding: 20rem 0; /* só consegui resolver com este padding */
-			
+			padding: 25rem 0;
 
 			li a {
 				display: inline-block;
-				font-size: $p-font-size;
+				font-size: $h6-font-size;
 				opacity: 0;
 				transform: translateY(-10px);
 				transition: all 660ms ease-in-out;

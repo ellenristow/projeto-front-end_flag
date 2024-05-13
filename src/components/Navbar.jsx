@@ -6,7 +6,6 @@ import { RxCross2 } from 'react-icons/rx';
 
 const Navbar = () => {
 	const [menuMobile, setMenuMobile] = useState(false);
-	
 
 	const openMenu = () => {
 		setMenuMobile(prevState => !prevState);
@@ -16,7 +15,6 @@ const Navbar = () => {
 		setMenuMobile(false);
 	};
 
-	
 
 	return (
 		<header>
