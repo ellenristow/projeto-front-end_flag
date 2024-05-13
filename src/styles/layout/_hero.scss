@@ -1,0 +1,51 @@
+@use '../abstracts/' as *;
+@use '../components/' as *;
+@use '../core/' as *;
+
+.hero {
+	position: relative;
+	
+	.container {
+		position: absolute;
+		top: 55%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+
+		h1,
+		h2 {
+			font-family: $main-font;
+			color: $text-light-color;
+			text-align: center;
+			
+		}
+
+		h1 {
+			font-size: $h1-font-size;
+			text-transform: uppercase;
+			@include breakpointDesktop(1024px) {
+				font-size: 3.5rem;
+			}
+			@include breakpointDesktop(768px) {
+				font-size: $h2-font-size;
+			}
+			@include breakpointDesktop(440px) {
+				font-size: $h3-font-size;
+			}
+		}
+
+		h2 {
+			font-size: $h2-font-size;
+			margin-top: 0;
+			@include breakpointDesktop(1024px) {
+				font-size: $h3-font-size;
+			}
+			@include breakpointDesktop(768px) {
+				font-size: $h4-font-size;
+			}
+			@include breakpointDesktop(440px) {
+				font-size: $p-font-size;
+			}
+		}
+	}
+}

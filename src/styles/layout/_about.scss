@@ -1,0 +1,118 @@
+@use '../abstracts/' as *;
+@use '../components/' as *;
+@use '../core/' as *;
+
+.about {
+	margin-top: 7rem;
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(4, auto);
+
+		@include breakpointDesktop(768px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+		}
+	}
+
+	&__background {
+		background-color: $bg-tertiary-color;
+		position: relative;
+		grid-column: 1/4;
+		grid-row: 1/4;
+		z-index: -1;
+		padding: 2rem;
+		@include breakpointDesktop(768px) {
+			grid-column: 1/2;
+			grid-row: 1/3;
+		}
+	}
+	&__title {
+		grid-column: 1/3;
+		grid-row: 1/2;
+		h2 {
+			font-family: $main-font;
+			font-size: $h2-font-size;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $text-dark-color;
+			padding: 1.5rem 2rem;
+
+			@include breakpointDesktop(768px) {
+				grid-column: 1/2;
+				grid-row: 1/2;
+				text-align: center;
+			}
+
+			@include breakpointDesktop(440px) {
+				font-size: $h3-font-size;
+			}
+		}
+	}
+	&__img1 {
+		position: relative;
+		grid-column: 3/5;
+		grid-row: 1/4;
+		z-index: 1;
+		margin: 4rem 0 4rem 1rem;
+		@include breakpointDesktop(768px) {
+			grid-column: 1/2;
+			grid-row: 2/3;
+			margin: 2rem;
+		}
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		padding: 2rem 0 3rem 2rem;
+		justify-content: center;
+		color: $text-dark-color;
+		align-items: flex-end;
+		text-align: right;
+		grid-column: 3/5;
+		grid-row: 4/5;
+
+		@include breakpointDesktop(768px) {
+			grid-column: 1/2;
+			grid-row: 3/4;
+			align-items: center;
+			padding: 1rem;
+			margin-top: 2rem;
+		}
+
+		h3 {
+			font-family: $main-font;
+			font-size: $h3-font-size;
+			display: flex;
+			align-items: start;
+			margin-bottom: 1.5rem;
+			@include breakpointDesktop(440px) {
+				font-size: $h4-font-size;
+			}
+		}
+		p {
+			font-family: $secondary-font;
+			font-size: $p-font-size;
+			line-height: 1.6;
+			@include breakpointDesktop(768px) {
+				text-align: center;
+				padding: 2rem;
+			}
+			@include breakpointDesktop(440px) {
+				font-size: $small-font-size;
+			}
+		}
+	}
+	&__img2 {
+		/* position: relative; */
+		grid-column: 1/3;
+		grid-row: 2/5;
+		margin: 4rem 2rem;
+		@include breakpointDesktop(768px) {
+			grid-column: 1/2;
+			grid-row: 4/5;
+			padding: 0;
+			margin-top: 1rem;
+		}
+	}
+}

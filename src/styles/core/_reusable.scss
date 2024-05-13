@@ -1,0 +1,23 @@
+@use '../abstracts/' as *;
+
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 2rem;
+	/* border: 1px solid blueviolet; */
+}
+
+.img-fluid {
+	width: 100%;
+	height: auto;
+	@include breakpointDesktop(768px) {
+		width: auto;
+		height: 100vh;
+	}
+}
+
+.img-grid {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

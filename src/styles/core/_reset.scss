@@ -1,0 +1,53 @@
+@use '../abstracts/' as *;
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	/* border: 1px solid blueviolet; */
+	
+}
+
+:root {
+	--swiper-theme-color: #0b0b0b;
+	--swiper-pagination-bullet-size: 0.5rem;
+	--swiper-pagination-bullet-width: 0.5rem;
+	--swiper-pagination-bullet-height: 0.5rem;
+	--swiper-pagination-bullet-inactive-opacity: 0.3;
+	/* --swiper-navigation-size: 1rem;/* não muda */
+	--swiper-navigation-top-offset: 30%;
+	--swiper-navigation-sides-offset: 0.5rem;
+	--swiper-navigation-color: #0b0b0b; 
+}
+
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+	scroll-behavior: smooth;
+}
+
+body {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	background-color: $bg-main-color;
+}
+ 
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	display: block;
+}
+
+main {
+	display: block !important;
+}

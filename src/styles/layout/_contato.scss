@@ -1,0 +1,115 @@
+@use '../abstracts/' as *;
+@use '../components/' as *;
+@use '../core/' as *;
+
+.contato {
+	margin-top: 7rem;
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: repeat(4, auto);
+		margin-bottom: 5rem;
+		@include breakpointDesktop(768px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+			margin: 3rem 0 5rem 0;
+		}
+	}
+
+	&__imagem {
+		grid-column: 1/4;
+		grid-row: 1/3;
+		z-index: -1;
+		@include breakpointDesktop(768px) {
+			display: none;
+		}
+	}
+
+	&__titulo {
+		grid-column: 5/6;
+		grid-row: 1/2;
+		@include breakpointDesktop(768px) {
+			grid-column: 1/2;
+			grid-row: 1/2;
+			text-align: center;
+		}
+		h2 {
+			font-family: $main-font;
+			font-size: $h2-font-size;
+			font-weight: 700;
+			color: $text-dark-color;
+			text-transform: uppercase;
+			padding: 1.5rem 2rem;
+
+			@include breakpointDesktop(440px) {
+				font-size: $h3-font-size;
+			}
+		}
+	}
+
+	&__form {
+		padding: 1rem;
+		background-color: $bg-tertiary-color;
+		grid-column: 3/6;
+		grid-row: 2/4;
+		@include breakpointDesktop(768px) {
+			grid-column: 1/2;
+			grid-row: 2/3;
+		}
+
+		form {
+			position: relative;
+			padding: 2rem;
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+			@include breakpointDesktop(440px) {
+				padding: 1rem 2rem;
+			}
+
+			input {
+				padding: 1rem 1rem 0 0;
+				font-family: $secondary-font;
+				font-size: $p-font-size;
+				background: transparent;
+				outline: none;
+				border: none;
+				border-bottom: 1px solid $text-dark-color;
+			}
+
+			textarea {
+				padding: 2.5rem 1rem 0 0;
+				font-family: $secondary-font;
+				font-size: $p-font-size;
+				background: transparent;
+				outline: none;
+				border: none;
+				border-bottom: 1px solid $text-dark-color;
+				resize: none;
+				height: 10rem;
+				overflow-y: hidden;
+			}
+
+			button {
+				margin-top: 1.5rem;
+			}
+
+			.error {
+				color: $text-light-color;
+				font-size: $mini-font-size;
+				font-family: $secondary-font;
+			}
+		}
+	}
+
+	&__submit {
+		grid-column: 1/6;
+		grid-row: 4/5;
+		padding-top: 4rem;
+		text-align: center;
+		color: $text-dark-color;
+		font-family: $secondary-font;
+		font-size: $p-font-size;
+	}
+}

@@ -1,0 +1,32 @@
+@use '../abstracts/' as *;
+@use '../components/' as *;
+@use '../core/' as *;
+
+.blog {
+   margin-top: 7rem;
+
+	&__wrapper {
+		display: flex;
+		
+	}	
+
+	&__title {
+		h2 {
+			font-family: $main-font;
+			font-size: $h2-font-size;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $text-dark-color;
+			padding: 1.5rem 0;
+
+			@include breakpointDesktop(768px) {
+				
+				
+			}
+
+			@include breakpointDesktop(440px) {
+				font-size: $h3-font-size;
+			}
+		}
+	}
+}

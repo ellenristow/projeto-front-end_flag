@@ -1,0 +1,112 @@
+@use '../abstracts/' as *;
+@use '../components/' as *;
+@use '../core/' as *;
+
+.nav {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	padding: 1rem 0;
+	background: rgba(80, 92, 84, 0.6);
+	backdrop-filter: blur(50px);
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	img {
+		width: 90px;
+		@include breakpointDesktop(768px) {
+			width: 75px;
+		}
+		@include breakpointDesktop(440px) {
+			width: 60px;
+		}
+	}
+
+	&__menu {
+		display: flex;
+		gap: 2rem;
+		align-items: center;
+		justify-content: center;
+
+		li a {
+			color: $text-light-color;
+			position: relative; // for the hover effect
+			text-transform: uppercase;
+			font-family: $secondary-font;
+			font-weight: 700;
+			font-size: $p-font-size;
+		}
+
+		li a:after {
+			content: '';
+			position: absolute;
+			width: 0;
+			left: 50%;
+			bottom: -2px;
+			height: 2px;
+			background-color: $text-light-color;
+			transition: all 300ms ease;
+		}
+
+		li a:hover:after {
+			width: 100%;
+			left: 0;
+		}
+
+		@include breakpointDesktop(768px) {
+			position: fixed;
+			flex-direction: column;
+			background: rgba(80, 92, 84, 0.6);
+			top: 4rem;
+			left: 0;
+			width: 100%;
+			max-height: calc(100vh - 4rem);
+			opacity: 0;
+			backdrop-filter: blur(50px);
+			padding: 4rem 0;
+			transition: all 660ms ease-in-out;
+
+			li a {
+				display: block;
+				font-size: $h5-font-size;
+				opacity: 0;
+				transform: translateY(-10px);
+				transition: all 660ms ease-in-out;
+			}
+		}
+
+		&.active {
+			opacity: 1;
+			transition: all 660ms ease-in-out;
+
+			li a {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	&__hamburger {
+		border: none;
+		background: transparent;
+		cursor: pointer;
+		display: none;
+		z-index: 3;
+
+		@include breakpointDesktop(768px) {
+			display: inline-block;
+
+			font-weight: 700;
+			font-size: $h4-font-size;
+
+			color: $text-light-color;
+			padding: 1rem;
+		}
+	}
+}

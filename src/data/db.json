@@ -1,0 +1,24 @@
+{
+	"posts": [
+		{
+			"id": 1,
+			"title": "Post 1",
+			"body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam sed minus maiores ipsa? Consequatur hic voluptas odio repudiandae! Error libero quam, quae unde numquam nostrum quaerat,quis quo deserunt nisi inventore commodi magni distinctio. Distinctio."
+		},
+		{
+			"id": 2,
+			"title": "Post 2",
+			"body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. In quod excepturi possimus accusamus eaque dignissimos quibusdam? Consequuntur qui nam ullam aliquam modi, similique iste cum."
+		},
+		{
+			"id": 3,
+			"title": "Post 3",
+			"body": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate officia eos eveniet quis enim facere fugit dicta non. Maiores id iusto maxime cupiditate odit temporibus unde fugiat illum. Quasi dicta vero eius sed distinctio cum nisi sit sequi maiores voluptatem exercitationem sunt, eaque totam quidem ratione vitae eveniet necessitatibus laudantium?"
+		},
+		{
+			"id": 4,
+			"title": "Post 4",
+			"body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, iure! Facilis neque nesciunt obcaecati tempore inventore voluptatum id."
+		}
+	]
+}

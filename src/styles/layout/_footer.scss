@@ -1,0 +1,87 @@
+@use '../abstracts/' as *;
+@use '../components/' as *;
+@use '../core/' as *;
+
+.footer {
+	background-color: $bg-secondary-color;
+	padding: 2rem 0;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&__tempo {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			h5 {
+				font-family: $secondary-font;
+				color: $text-light-color;
+				font-size: $h5-font-size;
+				font-weight: 700;
+				@include breakpointDesktop(768px) {
+					font-size: $h6-font-size;
+				}
+				@include breakpointDesktop(440px) {
+					font-size: $p-font-size;
+				}
+			}
+
+			p {
+				color: $text-light-color;
+				font-family: $secondary-font;
+				font-size: $small-font-size;
+				font-weight: 400;
+				padding: 0 0.5rem;
+				@include breakpointDesktop(440px) {
+					font-size: 0.6rem;
+				}
+			}
+		}
+
+		&__info {
+			text-align: center;
+
+			h5 {
+				font-family: $main-font;
+				color: $text-light-color;
+				font-size: $h5-font-size;
+				font-weight: 700;
+				@include breakpointDesktop(768px) {
+					font-size: $h6-font-size;
+				}
+				@include breakpointDesktop(440px) {
+					font-size: $p-font-size;
+				}
+			}
+
+			p {
+				color: $text-light-color;
+				font-family: $secondary-font;
+				font-size: $small-font-size;
+				font-weight: 400;
+				@include breakpointDesktop(440px) {
+					font-size: 0.6rem;
+				}
+			}
+		}
+
+		&__socialnetworks {
+			display: flex;
+			gap: 0.75rem;
+
+			a {
+				color: $text-light-color;
+				font-size: $h6-font-size;
+			}
+
+			@include breakpointDesktop(440px) {
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+			}
+		}
+	}
+}

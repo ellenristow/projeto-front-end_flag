@@ -1,0 +1,28 @@
+{
+	"team": [
+		{
+			"id": 1,
+			"image": "https://source.unsplash.com/random/150x150",
+			"name": "Maria Regina Dalago",
+			"role": "CEO"
+		},
+		{
+			"id": 2,
+			"image": "https://source.unsplash.com/random/150x150",
+			"name": "Deisi Teresinha Dalago",
+			"role": "Produtora de Eventos"
+		},
+		{
+			"id": 3,
+			"image": "https://source.unsplash.com/random/150x150",
+			"name": "João Adalberto Dalago",
+			"role": "Chefe de Produção"
+		},
+		{
+			"id": 4,
+			"image": "https://source.unsplash.com/random/150x150",
+			"name": "Nelson Luis Dalago",
+			"role": "Relações Públicas"
+		}
+	]
+}

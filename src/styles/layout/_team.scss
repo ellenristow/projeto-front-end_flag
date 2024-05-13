@@ -1,0 +1,95 @@
+@use '../abstracts/' as *;
+@use '../components/' as *;
+@use '../core/' as *;
+
+.team {
+	margin-top: 7rem;
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__title {
+		padding: 1.5rem 2rem;
+
+		h2 {
+			font-family: $main-font;
+			font-size: $h2-font-size;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $text-dark-color;
+			padding-bottom: 1.5rem;
+			
+			@include breakpointDesktop(440px) {
+				font-size: $h3-font-size;
+				text-align: center;
+			}
+		}
+	}
+
+	&__cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+		margin-bottom: 5rem;
+		@include breakpointDesktop(440px) {
+			justify-content: center;
+		}
+	}
+
+	&__card {
+		width: 18rem;
+		background-color: $bg-secondary-color;
+		box-shadow: 3px 3px 15px rgba(80, 92, 84, 0.4);
+		border-radius: 0.75rem;
+		margin: 1rem 0;
+		@include breakpointDesktop(440px) {
+			width: 15rem;
+		}
+	}
+
+	img {
+		display: flex;
+		justify-content: center;
+		width: 8rem;
+		border-radius: 50%;
+		position: relative;
+		bottom: -4rem;
+		left: 27%;
+		@include breakpointDesktop(440px) {
+			width: 7rem;
+			bottom: -3.5rem;
+		}
+	}
+
+	&__card__description {
+		background-color: $bg-tertiary-color;
+		border-radius: 0 0 0.75rem 0.75rem;
+		padding-top: 5.5rem;
+		padding-bottom: 2.5rem;
+		text-align: center;
+		h5 {
+			font-family: $main-font;
+			font-size: $h5-font-size;
+			font-weight: 500;
+			color: $text-dark-color;
+			margin-bottom: 0.5rem;
+			@include breakpointDesktop(440px) {
+				font-size: $h6-font-size;
+			}
+		}
+		p {
+			font-family: $secondary-font;
+			font-size: $p-font-size;
+			font-weight: 400;
+			color: $text-dark-color;
+			padding: 0 1rem;
+			@include breakpointDesktop(440px) {
+				font-size: $small-font-size;
+			}
+		}
+	}
+}
