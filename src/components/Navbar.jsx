@@ -1,11 +1,12 @@
 import { Link, NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { FaBars } from 'react-icons/fa';
 import { RxCross2 } from 'react-icons/rx';
 
 const Navbar = () => {
 	const [menuMobile, setMenuMobile] = useState(false);
+	const [homeBtnHamburger, setHomeBtnHamburger] = useState(false);
 
 	const openMenu = () => {
 		setMenuMobile(prevState => !prevState);
@@ -14,6 +15,22 @@ const Navbar = () => {
 	const closeMenu = () => {
 		setMenuMobile(false);
 	};
+
+	const handleResize = () => {
+		if (window.innerWidth <= 768) {
+			setHomeBtnHamburger(true);
+		} else {
+			setHomeBtnHamburger(false);
+		}	
+	}
+
+	useEffect(() => {
+		handleResize();
+		window.addEventListener('resize', handleResize);
+		return () => {
+			window.removeEventListener('resize', handleResize)
+		}
+	}, []);
 
 	return (
 		<header>
@@ -27,6 +44,11 @@ const Navbar = () => {
 						</div>
 						<nav>
 							<ul className={menuMobile ? 'nav__menu active' : 'nav__menu'}>
+								{homeBtnHamburger && (
+									<li>
+										<NavLink to='/'>Home</NavLink>
+									</li>
+								)}
 								<li>
 									<NavLink to='/about' onClick={closeMenu}>
 										sobre nós

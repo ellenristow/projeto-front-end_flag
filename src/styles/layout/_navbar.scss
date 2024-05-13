@@ -10,7 +10,7 @@
 	z-index: 10;
 	padding: 1rem 0;
 	background: rgba(80, 92, 84, 0.6);
-	backdrop-filter: blur(50px);
+	/* backdrop-filter: blur(50px); */
 
 	&__wrapper {
 		display: flex;
@@ -63,18 +63,18 @@
 			position: fixed;
 			flex-direction: column;
 			background: rgba(80, 92, 84, 0.6);
-			top: 4rem;
+			top: 0;
 			left: 0;
 			width: 100%;
-			max-height: calc(100vh - 4rem);
+			max-height: 100vh;
 			opacity: 0;
-			backdrop-filter: blur(50px);
-			padding: 4rem 0;
-			transition: all 660ms ease-in-out;
+			backdrop-filter: blur(60px);
+			padding: 20rem 0; /* só consegui resolver com este padding */
+			
 
 			li a {
-				display: block;
-				font-size: $h5-font-size;
+				display: inline-block;
+				font-size: $p-font-size;
 				opacity: 0;
 				transform: translateY(-10px);
 				transition: all 660ms ease-in-out;
@@ -88,6 +88,25 @@
 			li a {
 				opacity: 1;
 				transform: translateY(0);
+			}
+
+			li:nth-child(1) a {
+				transition-delay: 100ms;
+			}
+			li:nth-child(2) a {
+				transition-delay: 300ms;
+			}
+			li:nth-child(3) a {
+				transition-delay: 500ms;
+			}
+			li:nth-child(4) a {
+				transition-delay: 700ms;
+			}
+			li:nth-child(5) a {
+				transition-delay: 900ms;
+			}
+			li:nth-child(6) a {
+				transition-delay:1100ms;
 			}
 		}
 	}
