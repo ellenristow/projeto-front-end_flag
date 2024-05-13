@@ -32,9 +32,12 @@
 	&__cards {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: space-evenly;
 		width: 100%;
 		margin-bottom: 5rem;
+		@include breakpointDesktop(768px) {
+			justify-content: center;
+		}
 		@include breakpointDesktop(440px) {
 			justify-content: center;
 		}
@@ -74,8 +77,8 @@
 		h5 {
 			font-family: $main-font;
 			font-size: $h5-font-size;
-			font-weight: 500;
-			color: $text-dark-color;
+			font-weight: 600;
+			color: $text-light-color;
 			margin-bottom: 0.5rem;
 			@include breakpointDesktop(440px) {
 				font-size: $h6-font-size;
@@ -84,8 +87,8 @@
 		p {
 			font-family: $secondary-font;
 			font-size: $p-font-size;
-			font-weight: 400;
-			color: $text-dark-color;
+			font-weight: 500;
+			color: $text-light-color;
 			padding: 0 1rem;
 			@include breakpointDesktop(440px) {
 				font-size: $small-font-size;
