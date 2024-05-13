@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { usePosts } from '../hooks/usePosts';
 
+import PostForm from '../components/pages/PostForm';
+
 import axios from 'axios';
 
 const CreatePost = () => {

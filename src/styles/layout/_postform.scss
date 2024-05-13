@@ -1,0 +1,22 @@
+@use '../abstracts/' as *;
+@use '../components/' as *;
+@use '../core/' as *;
+
+.post-form {
+	margin-top: 7rem;
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__input {
+		padding: 1rem 1rem 0 0;
+		font-family: $secondary-font;
+		font-size: $p-font-size;
+		background: transparent;
+		outline: none;
+		border: none;
+		border-bottom: 1px solid $text-dark-color;
+	}
+}
