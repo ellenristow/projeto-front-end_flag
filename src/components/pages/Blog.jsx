@@ -1,7 +1,7 @@
 import { Link, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Pagination from '../pages/Pagination';
-import CreatePost from '../../api/CreatePost';
+
 
 const Blog = () => {
 	const [posts, setPosts] = useState([]);
@@ -43,7 +43,7 @@ const Blog = () => {
 					</div>
 					<div className='blog__create'>
 						<p>
-							<Link to={`/create`}>novo post</Link>
+							<Link to={`/create`}>post</Link>
 						</p>
 					</div>
 					<div className='blog__posts'>
@@ -67,9 +67,6 @@ const Blog = () => {
 					<Pagination totalPosts={posts.length} postsPerPage={postsPerPage} currentPage={currentPage} paginate={paginate} />
 				</div>
 			</div>
-			<Routes>
-				<Route path='/create' element={<CreatePost />}></Route>
-			</Routes>
 		</section>
 	);
 };

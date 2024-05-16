@@ -1,7 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
-import CreatePost from './api/CreatePost';
-
 import Navbar from './components/Navbar';
 
 import Hero from './components/pages/Hero';
@@ -10,6 +8,7 @@ import Eventos from './components/pages/Eventos';
 import Team from './components/pages/Team';
 import Contato from './components/pages/Contato';
 import Blog from './components/pages/Blog';
+import CreatePost from './api/CreatePost';
 
 import Footer from './components/Footer';
 
@@ -28,6 +27,7 @@ function App() {
 					<Route path='/team' element={<Team />} />
 					<Route path='/contato' element={<Contato />} />
 					<Route path='/blog' element={<Blog />} />
+					<Route path='/create' element={<CreatePost />} />
 				</Routes>
 			</main>
 			<Footer />
