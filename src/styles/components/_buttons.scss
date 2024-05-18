@@ -52,7 +52,7 @@
 	}
 }
 
-.pagination__button, .form__btns {
+.pagination__button, .form__btns, button {
 	font-family: $secondary-font;
 	padding: 0.35rem 1rem;
 	font-size: $small-font-size;
@@ -71,4 +71,6 @@
 		background: $bg-secondary-color;
 		border: 2px solid $bg-secondary-color;
 	}
+
+	
 }
