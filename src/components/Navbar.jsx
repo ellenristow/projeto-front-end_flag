@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { FaBars } from 'react-icons/fa';
 import { RxCross2 } from 'react-icons/rx';
@@ -15,6 +15,7 @@ const Navbar = () => {
 		setMenuMobile(false);
 	};
 
+
 	return (
 		<header>
 			<div className='nav'>
@@ -27,6 +28,7 @@ const Navbar = () => {
 						</div>
 						<nav>
 							<ul className={menuMobile ? 'nav__menu active' : 'nav__menu'}>
+								
 								<li>
 									<NavLink to='/about' onClick={closeMenu}>
 										sobre nós
