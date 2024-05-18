@@ -4,6 +4,9 @@
 
 .eventos {
 	margin-top: 7rem;
+	@include breakpointDesktop(768px) {
+		margin-top: 9rem;
+	}
 
 	&__wrapper {
 		display: grid;
