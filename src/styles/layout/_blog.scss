@@ -4,6 +4,9 @@
 
 .blog {
 	margin-top: 7rem;
+	@include breakpointDesktop(768px) {
+		margin-top: 9rem;
+	}
 
 	&__wrapper {
 		display: flex;
@@ -25,6 +28,7 @@
 			}
 		}
 	}
+
 	&__create {
 		display: flex;
 		justify-content: flex-end;
@@ -58,8 +62,11 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 3rem;
-		padding-bottom: 5rem;
-		margin-top: 3rem;
+		margin: 3rem 0 5rem 0;
+		@include breakpointDesktop(768px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+		}
 
 		h4 {
 			font-family: $secondary-font;
