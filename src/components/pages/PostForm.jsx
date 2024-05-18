@@ -7,7 +7,9 @@ const PostForm = ({ action, title, body, onTitleChange, onBodyChange, onSubmit }
 		<section className='post-form'>
 			<div className='container'>
 				<div className='post-form__wrapper'>
-					<h3>{action === 'update' ? 'Update Post' : action === 'delete' ? 'Delete Post' : action === 'Create Post'}</h3>
+					<h3>
+						{action === 'update' ? 'Update Post' : action === 'delete' ? 'Delete Post' : action === 'Create Post'} 
+					</h3>
 					<div className='post-form__input'>
 						<label>Title</label>
 						<input type='text' value={title} onChange={event => onTitleChange(event.target.value)} required />
