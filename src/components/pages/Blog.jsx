@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom';
+import { Link, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Pagination from '../pages/Pagination';
+
 
 const Blog = () => {
 	const [posts, setPosts] = useState([]);
@@ -54,10 +55,10 @@ const Blog = () => {
 									{post.id} - {post.title}
 								</h3>
 								<p>{post.body}</p>
-								<Link to={`/update/${post.id}`} className='blog__btn update'>
+								<Link to={`/update/${post.id}`} className='blog__button update'>
 									atualizar
 								</Link>
-								<Link to={`/delete/${post.id}`} className='blog__btn delete'>
+								<Link to={`/delete/${post.id}`} className='blog__button delete'>
 									deletar
 								</Link>
 							</article>

@@ -1,0 +1,57 @@
+@use '../abstracts/' as *;
+@use '../components/' as *;
+@use '../core/' as *;
+
+.post-form {
+	margin-top: 7rem;
+
+	.container {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: 5rem 0 8rem 0;
+		width: 50%;
+	}
+
+	&__input {
+		display: flex;
+		flex-direction: column;
+		label {
+			font-family: $main-font;
+			font-size: $h4-font-size;
+			align-items: center;
+			margin-top: 1rem;
+		}
+		input {
+			font-size: $p-font-size;
+			background: transparent;
+			outline: none;
+			border: none;
+			border-bottom: 1px solid $text-dark-color;
+			padding: 1rem 0;
+			font-family: $secondary-font;
+		}
+		textarea {
+			font-size: $p-font-size;
+			background: transparent;
+			outline: none;
+			border: none;
+			border-bottom: 1px solid $text-dark-color;
+			padding: 1rem 0;
+			font-family: $secondary-font;
+			overflow: hidden;
+			height: 10rem;
+		}
+	}
+
+	&__btns {
+		justify-content: space-between;
+		gap: 2rem;
+		margin-top: 1rem;
+	}
+}
