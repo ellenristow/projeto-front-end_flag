@@ -40,11 +40,9 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
 
 			{pageNumbers.map((number, idx) =>
 				number === '...' ? (
-					<span key={`ellipsis-${idx}`}>
-						...
-					</span>
+					<span key={`ellipsis-${idx}`}>...</span>
 				) : (
-					<button key={`page-${number}`} onClick={() => paginate(number)} className={currentPage === number ? 'active' : ''}>
+					<button key={`page-${number}`} onClick={() => paginate(number)} className={`pagination__page-button ${currentPage === number ? 'active' : ''}`}>
 						{number}
 					</button>
 				),
