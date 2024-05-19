@@ -116,10 +116,10 @@
 
 	.testimonials {
 		margin: 0;
-		padding: 8rem 12rem 4rem 12rem;
+		padding: 4rem 12rem 3rem 12rem;
 		color: $text-dark-color;
 		@include breakpointDesktop(768px) {
-			padding: 6rem 4rem 2rem 4rem;
+			padding: 3rem 4rem 2rem 4rem;
 		}
 		p {
 			font-family: $secondary-font;
