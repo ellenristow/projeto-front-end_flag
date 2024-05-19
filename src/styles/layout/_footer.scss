@@ -4,7 +4,7 @@
 
 .footer {
 	background-color: $bg-secondary-color;
-	padding: 2rem 0;
+	padding: 1rem 0;
 
 	.container {
 		display: flex;
@@ -68,9 +68,14 @@
 			}
 		}
 
-		&__socialnetworks {
+		&__icons__socialnetworks,
+		&__icons__theme {
 			display: flex;
+			flex-wrap: wrap;
 			gap: 0.75rem;
+			align-content: center;
+			justify-content: flex-end;
+			padding: 0.5rem 0;
 
 			a {
 				color: $text-light-color;

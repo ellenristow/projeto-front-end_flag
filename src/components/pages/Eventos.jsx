@@ -1,16 +1,21 @@
 import { register } from 'swiper/element/bundle';
 register();
 
+import { useContext } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import { ThemeContext } from '../../hooks/context/ThemeContext';
+
+import '../../styles/layout/_changetheme.scss';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 
 const Eventos = () => {
+	const { theme, toggleTheme } = useContext(ThemeContext);
 
 	return (
-		<section className='eventos'>
+		<section className={`eventos ${theme === 'dark' ? 'dark-theme' : ''}`} onClick={toggleTheme}>
 			<div className='container'>
 				<div className='eventos__wrapper'>
 					<div className='eventos__titulo'>
@@ -50,8 +55,7 @@ const Eventos = () => {
 						</SwiperSlide>
 						<SwiperSlide>
 							<p>
-								“Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt esse, dicta non placeat odit maxime sint exercitationem natus cupiditate officia cum illum atque fuga asperiores
-								nisi. Sint, architecto? Explicabo rem eum autem deserunt voluptates quas temporibus eaque veniam quisquam beatae..”
+								“Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, architecto? Explicabo rem eum autem deserunt voluptates quas temporibus eaque veniam quisquam beatae..”
 							</p>
 							<span>Beltrana Soares</span>
 						</SwiperSlide>

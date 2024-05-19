@@ -15,10 +15,9 @@
 	--swiper-pagination-bullet-width: 0.5rem;
 	--swiper-pagination-bullet-height: 0.5rem;
 	--swiper-pagination-bullet-inactive-opacity: 0.3;
-	/* --swiper-navigation-size: 1rem;/* não muda */
 	--swiper-navigation-top-offset: 30%;
 	--swiper-navigation-sides-offset: 0.5rem;
-	--swiper-navigation-color: #0b0b0b; 
+	--swiper-navigation-color: #0b0b0b;
 }
 
 html {
@@ -33,7 +32,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 	background-color: $bg-main-color;
 }
- 
 
 a {
 	text-decoration: none;

@@ -1,6 +1,8 @@
 import { FaInstagram, FaFacebook, FaTiktok } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import ChangeTheme from '../hooks/ChangeTheme';
+
 
 const socialNetworks = [
 	{ name: 'instagram', icon: <FaInstagram /> },
@@ -27,6 +29,7 @@ const weatherDescriptions = {
 };
 
 const Footer = () => {
+
 	const [weather, setWeather] = useState(null);
 	const [error, setError] = useState(null);
 
@@ -72,12 +75,17 @@ const Footer = () => {
 					<p>Limeira Alta, Brusque, SC</p>
 					<p>Brasil</p>
 				</div>
-				<div className='container__socialnetworks'>
-					{socialNetworks.map(network => (
-						<a href='#' className='social-btn' id={network.name} key={network.name}>
-							{network.icon}
-						</a>
-					))}
+				<div className='container__icons'>
+					<div className='container__icons__socialnetworks'>
+						{socialNetworks.map(network => (
+							<a href='#' className='social-btn' id={network.name} key={network.name}>
+								{network.icon}
+							</a>
+						))}
+					</div>
+					<div className='container__icons__theme'>
+						<ChangeTheme />
+					</div>
 				</div>
 			</div>
 		</section>

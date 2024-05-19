@@ -1,0 +1,25 @@
+@use '../abstracts/' as *;
+@use '../components/' as *;
+@use '../core/' as *;
+
+.dark-theme {
+	background: $bg-secondary-color !important;
+	border-top: 7rem solid $bg-secondary-color;
+
+	.eventos__titulo {
+		background-color: $bg-secondary-color !important;
+	}
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	span {
+		color: $text-light-color !important;
+	}
+
+	.team__card {
+		background-color: $bg-main-color !important;
+	}
+}

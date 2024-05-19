@@ -1,8 +1,13 @@
-import React from 'react';
+import { useContext } from 'react';
+import { ThemeContext } from '../../hooks/context/ThemeContext';
+
+import '../../styles/layout/_changetheme.scss';
 
 const About = () => {
+	const { theme, toggleTheme } = useContext(ThemeContext);
+
 	return (
-		<section className='about'>
+		<section className={`about ${theme === 'dark' ? 'dark-theme' : ''}`} onClick={toggleTheme}>
 			<div className='container'>
 				<div className='about__wrapper'>
 					<div className='about__background'></div>

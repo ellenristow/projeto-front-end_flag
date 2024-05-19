@@ -3,10 +3,10 @@
 @use '../core/' as *;
 
 .about {
-	margin-top: 7rem;
+	border-top: 7rem solid $bg-main-color;
 
 	@include breakpointDesktop(768px) {
-		margin-top: 9rem;
+		border-top: 9rem solid $bg-main-color;
 	}
 	
 	&__wrapper {
@@ -121,3 +121,4 @@
 		}
 	}
 }
+

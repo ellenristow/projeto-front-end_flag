@@ -1,5 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { ThemeContext } from '../../hooks/context/ThemeContext';
 
+import '../../styles/layout/_changetheme.scss';
 const Team = () => {
 	const [teamData, setTeamData] = useState([]);
 
@@ -20,8 +22,10 @@ const Team = () => {
 		fetchTeamData();
 	}, []);
 
+	const { theme, toggleTheme } = useContext(ThemeContext);
+
 	return (
-		<section className='team'>
+		<section className={`team ${theme === 'dark' ? 'dark-theme' : ''}`} onClick={toggleTheme}>
 			<div className='container'>
 				<div className='team__wrapper'>
 					<div className='team__title'>

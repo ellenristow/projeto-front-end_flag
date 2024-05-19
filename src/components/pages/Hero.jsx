@@ -26,13 +26,13 @@ const Hero = () => {
 				>
 					{' '}
 					<SwiperSlide>
-						<img className='img-fluid' src='/public/foto-slider1.jpeg' alt='slide1' />
+						<img className='img-fluid' src='/foto-slider1.jpeg' alt='slide1' />
 					</SwiperSlide>
 					<SwiperSlide>
-						<img className='img-fluid' src='/public/fotos-slider2.jpeg' alt='slide2' />
+						<img className='img-fluid' src='/fotos-slider2.jpeg' alt='slide2' />
 					</SwiperSlide>
 					<SwiperSlide>
-						<img className='img-fluid' src='/public/fotos-slider3.jpeg' alt='slide3' />
+						<img className='img-fluid' src='/fotos-slider3.jpeg' alt='slide3' />
 					</SwiperSlide>
 				</Swiper>
 			</div>
