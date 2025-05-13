@@ -33,7 +33,7 @@ const Footer = () => {
 	useEffect(() => {
 		const fetchWeather = async () => {
 			try {
-				const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=brusque&units=metric&appid=2c5131c26da11272018716e84632b1a0`);
+				const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=brusque&units=metric&appid=${process.env.REACT_APP_WEATHERMAP_APP_KEY}`);
 				setWeather(response.data);
 			} catch (error) {
 				setError(error.response.data.message);
