@@ -1,0 +1,27 @@
+name: Clean Install
+
+on:
+  workflow_dispatch
+
+jobs:
+  reinstall:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: |
+          rm -rf node_modules
+          rm -f package-lock.json
+          npm install
+
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add package-lock.json
+          git commit -m "chore: regenerate lockfile without node-sass" || echo "no changes"
+          git push
